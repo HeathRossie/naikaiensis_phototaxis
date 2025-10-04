@@ -11,6 +11,9 @@ d_avg = split(d, list(d$cond, d$min, d$day)) %>% lapply(., function(d){
   return(res)
 }) %>% do.call(rbind,.)
 
+track_length = 14.5
+cols = c("black", "orange", "blue")
+
 
 TM = theme(axis.text.x = element_text(family = "Times New Roman",size = rel(3), colour = "black"),
            axis.text.y = element_text(family = "Times New Roman",size = rel(3), colour = "black"),
